@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}home.html{% endblock %}
+
+{% block extra-style %}
+<style type="text/css">
+.home-image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    
+}
+.title {
+    color: #c80;
+    font-weight: bold;
+}
+.powered {
+    position: relative;
+    top: 77%;
+    color: #cc0;
+    font-style: italic;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+      <img src="static/img/airplane.jpg" alt="airplane" class="home-image">
+    </div>
+
+    <div class="carousel-item">
+      <img src="static/img/newyork.jpg" alt="newyork" class="home-image">
+    </div>
+
+    <div class="carousel-item">
+      <img src="static/img/pier.jpg" alt="pier" class="home-image">
+    </div>
+
+    <div class="carousel-item">
+      <img src="static/img/lion.jpg" alt="lion" class="home-image">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#myCarousel" data-slide="prev"> 
+  	<span class="carousel-control-prev-icon" aria-hidden="true"></span> 
+  	<!-- <span>Previous</span> -->
+  </a>
+  <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+  	<span class="carousel-control-next-icon" aria-hidden="true"></span>
+  	<!-- <span>Next</span> -->
+  </a>
+
+</div>
+
+    <hr style="margin: 10px 0;">
+
+    <div class="row text-center">
+        <div class="col-sm-3">
+            <h3>링크 앱</h3>
+            <p>링크앱은 여러분이 모두 기억하지 못하는 사이트들을 모아주는 앱입니다. 마음에 드는 사이트가 있다면 링크해 두세요.</p>
+        </div>
+        <div class="col-sm-3">
+            <h3>설문 앱</h3>
+            <p>넌 어떤 음식을 좋아해? 우리 조금 있다가 뭐할까? 여행을 간다면 어디로 가고 싶어? 궁금하지 않으세요? 여러분의 답변을 기다립니다.</p>
+        </div>
+        <div class="col-sm-3">
+            <h3>블로그 앱</h3>
+            <p>기쁜 일, 슬픈 일이 있었나요? 오늘 당신의 하루는 어떠했는지 기록하고 나눠보세요. 서로 댓글을 달며 응원해줄 수도 있답니다.</p>
+        </div>
+        <div class="col-sm-3">
+            <h3>사진 앱</h3>
+            <p>찰칵! 찰칵! 멋진 사진을 찍어서 올려보세요. 공유도 가능하고 앨범으로 만들어 저장할 수도 있답니다.</p>
+        </div>
+    </div>
+{% endblock content %}
+
+

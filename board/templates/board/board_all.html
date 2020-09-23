@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}board_all.html{% endblock %}
+{% block content %}
+
+	<h1>Board List</h1>
+	<br>
+	
+	<table class="table table-bordered table-sm table-striped">
+		<thead>
+			<tr class="table-primary">
+				<th>No.</th>
+				<th>Title</th>
+				<th>Owner</th>
+				<th>Date</th>
+				<th>Hits</th>
+			</tr>
+		</thead>
+		<tbody>
+		{% for board in boards %}
+		<tr>
+			<td>{{ board.id }}</td>
+			<td><a href="{{ board.get_absolute_url }}">{{ board.title }}</a></td>
+			<td>{{ board.owner }}</td>
+			<td>{{ board.create_dt }}</td>
+			<td>{{ board.hits }}</td>
+		</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+
+{% endblock %}

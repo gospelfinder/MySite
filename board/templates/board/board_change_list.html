@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}board_change_list.html{% endblock %}
+
+{% block content %}
+
+	<h1>Board Change - {{user}}</h1>
+	<br>
+	
+	<table class="table table-bordered table-sm table-striped">
+		<thead>
+			<tr class="table-primary">
+				<th>Id</th>
+				<th>Title</th>
+				<th>Content</th>
+				<th>Owner</th>
+				<th>Update</th>
+				<th>Delete</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+		{% for item in object_list %}
+		<tr>
+			<td>{{ item.id }}</td>
+			<td>{{ item.title }}</td>
+			<td>{{ item.content }}</td>
+			<td>{{ item.owner }}</td>
+			<td><a href="{% url 'board:update' item.id %}">Update</a></td>
+			<td><a href="{% url 'board:delete' item.id %}">Delete</a></td>
+		</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+	
+{% endblock %}
